@@ -8,7 +8,6 @@
             "email": "bondarenko.kirill@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
     "require": {
         "laravel/framework": ">=4.2.1"
     },
