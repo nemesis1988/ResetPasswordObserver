@@ -3,6 +3,7 @@
     "description": "Generate reset_password_token",
     "type": "library",
     "version": "1.0.1",
+    "minimum-stability": "dev",
     "authors": [
         {
             "name": "Bondarenko Kirill",
