@@ -17,14 +17,14 @@ class GenerateResetPasswordTokenObserver
      *
      * @var string
      */
-    public $urlToSetPassword = 'users/new-password/';
+    protected $urlToSetPassword = 'users/new-password/';
 
     /**
      * Тема письма
      *
      * @var string
      */
-    public $subject = 'Создание пароля';
+    protected $subject = 'Создание пароля';
 
     /**
      * @param $model
