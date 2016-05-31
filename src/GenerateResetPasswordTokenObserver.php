@@ -1,5 +1,5 @@
 <?php
-namespace ResetPasswordObserver;
+namespace Nemesis\ResetPasswordObserver;
 
 /**
  * Генерация токена сброса пароля при создании нового пользователя, и отправка ссылки для сохдания нового пароля на
