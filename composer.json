@@ -2,6 +2,7 @@
     "name": "nemesis/laravel-reset-password-observer",
     "description": "Generate reset_password_token",
     "type": "library",
+    "version": "1.0.1",
     "authors": [
         {
             "name": "Bondarenko Kirill",
