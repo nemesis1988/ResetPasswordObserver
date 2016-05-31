@@ -2,8 +2,7 @@
 namespace Nemesis\ResetPasswordObserver;
 
 /**
- * Генерация токена сброса пароля при создании нового пользователя, и отправка ссылки для сохдания нового пароля на
- * почту
+ * Генерация токена сброса пароля при создании нового пользователя
  *
  * Class GenerateResetPasswordTokenObserver
  * @package ResetPasswordObserver
@@ -12,20 +11,6 @@ namespace Nemesis\ResetPasswordObserver;
  */
 class GenerateResetPasswordTokenObserver
 {
-    /**
-     * Адрес страницы ввода нового пароля
-     *
-     * @var string
-     */
-    protected $urlToSetPassword = 'users/new-password/';
-
-    /**
-     * Тема письма
-     *
-     * @var string
-     */
-    protected $subject = 'Создание пароля';
-
     /**
      * @param $model
      * @return bool
@@ -36,8 +21,6 @@ class GenerateResetPasswordTokenObserver
         if (!$model->password) {
             $model->reset_password_token = hash('md5', microtime());
             $model->save();
-
-            mail($model->email, $this->subject, link_to($this->urlToSetPassword . $model->reset_password_token));
         }
 
         return true;
