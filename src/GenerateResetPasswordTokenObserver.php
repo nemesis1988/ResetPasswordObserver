@@ -37,7 +37,7 @@ class GenerateResetPasswordTokenObserver
             $model->reset_password_token = hash('md5', microtime());
             $model->save();
 
-            mail($model->email, $this->subject, \Url::to($this->urlToSetPassword . $model->reset_password_token));
+            mail($model->email, $this->subject, link_to($this->urlToSetPassword . $model->reset_password_token));
         }
 
         return true;
